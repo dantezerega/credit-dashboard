@@ -2,7 +2,7 @@ import { useCallback, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { BondRow } from '../api/types'
 import { useUiStore } from '../store/uiStore'
-import { bps, maturityLabel, num, pct, px, rvColor, signColor } from '../utils/format'
+import { bps, maturityLabel, num, px, rvColor, signColor } from '../utils/format'
 import { RvBadge } from './RvBadge'
 
 type SortDir = 'asc' | 'desc'
