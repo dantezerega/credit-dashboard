@@ -137,8 +137,4 @@ updates can attach via a WebSocket route without touching the calculation layer.
 
 ## Author
 
-**Dante Zerega** — design, quant models, and implementation.
-
-## License
-
-MIT © 2026 Dante Zerega
+**Dante Zerega** — design, models, and implementation.
