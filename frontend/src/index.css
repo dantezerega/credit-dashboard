@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+
+  --color-terminal-bg: #0b0f17;
+  --color-terminal-panel: #121827;
+  --color-terminal-raised: #1a2234;
+  --color-terminal-border: #232d42;
+  --color-terminal-hairline: #1a2336;
+  --color-terminal-text: #e2e8f1;
+  --color-terminal-dim: #94a0b3;
+  --color-terminal-faint: #647085;
+  --color-terminal-accent: #f2a93b;
+  --color-cheap: #3dd68c;
+  --color-rich: #f4645c;
+  --color-fairlabel: #94a0b3;
+}
+
+html,
+body {
+  @apply bg-terminal-bg text-terminal-text;
+  font-size: 14px;
+  letter-spacing: -0.006em;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2b3650 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b3650;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.num {
+  @apply font-mono tabular-nums;
+  letter-spacing: 0;
+}
+
+.panel {
+  @apply bg-terminal-panel border-terminal-border rounded-lg border;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.panel-title {
+  @apply text-terminal-dim border-terminal-hairline border-b px-5 py-3.5 text-[11px] font-semibold tracking-[0.14em] uppercase;
+}
+
+.display {
+  @apply font-display;
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
